@@ -125,4 +125,13 @@
 .footer span {
   color: #0F77EA;
   font-style: italic;
+}
+
+/* For large devices */
+/* For medium devices */
+/* For medium and small devices */
+@media only screen and (max-width: 768px) {
+  .quiz-container {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
