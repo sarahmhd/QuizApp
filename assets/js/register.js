@@ -29,7 +29,7 @@ function validateName() {
     Err[0].classList.add("show");
     name.focus();
   } else if (!validName.test(userName)) {
-    Err[0].innerHTML = "Name must start with only string";
+    Err[0].innerHTML = "Name must be only string";
     Err[0].classList.add("show");
     name.focus();
   } else {
@@ -70,7 +70,7 @@ function validatePassword() {
     password.focus();
   } else if (!validPass.test(userPassword)) {
     Err[2].innerHTML =
-      "password must contains at least one uppercase , one lowercase and one number";
+      "password must contains at least 8 char one uppercase , one lowercase, one number and special char";
     Err[2].classList.add("show");
     password.focus();
   } else {
