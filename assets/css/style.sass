@@ -1,0 +1,113 @@
+// =================== COLORS =================== //
+$green-color: #69e793
+$green-border: #0f0
+$red-border: #f00
+$blue-color: #0F77EA
+// =================== MIXIN =================== //
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+.quiz-container
+    width: 650px
+    margin: 60px auto
+    display: flex
+    flex-direction: column
+    gap: 25px
+    padding: 20px
+    .header
+        font-weight: bold
+        font-size: 15px
+    .question
+        font-size: 1.7rem
+        margin-top: 20px
+        line-height: 1.6
+    .answers.done
+        .answer
+            pointer-events: none
+    .answers
+        display: flex
+        flex-direction: column
+        gap: 15px
+        .answer
+            border: 1px solid #fff
+            background: #fff
+            cursor: pointer
+            padding: 15px 17px
+            border-radius: 6px
+            color: #4a4a4a
+            box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
+        .answer.correct,
+        .answer.wrong
+            &::before
+                right: 20px
+                font-size: 20px
+                top: 50%
+                transform: translateY(-50%)
+                font-weight: bold
+                height: 20px
+                line-height: 15px
+        .answer.correct
+            background: $green-color
+            border: 1px solid $green-border
+            position: relative
+            &::before
+                position: absolute
+                content: "✓"
+                color: #167a16
+        .answer.wrong
+            border-color: $red-border
+            position: relative
+            &::before
+                position: absolute
+                content: "x"
+                color: #e72626
+    .next-qus
+        background: $blue-color
+        color: #fff
+        text-transform: capitalize
+        transition: 0.5s
+.show-result
+    width: 350px
+    height: 250px
+    min-height: 250px
+    background: $blue-color
+    color: #fff
+    margin: 150px auto
+    border-radius: 20px
+    padding: 30px 20px
+    .result
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+        text-transform: capitalize
+        gap: 15px
+        height: 100%
+        p
+            text-align: center
+            text-transform: capitalize
+            font-weight: bold
+            line-height: 1.7
+            padding: 0 20px
+            letter-spacing: 1px
+        .btns
+            display: flex
+            gap: 20px
+        .replay,
+        .quit
+            background: #fff
+            border: 0
+            padding: 10px 14px
+            color: $blue-color
+.hide
+    display: none
+
+.footer
+    color: #4a4a4a
+    span
+        color: $blue-color
+        font-style: italic

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.quiz-container {
+  width: 650px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+}
+.quiz-container .header {
+  font-weight: bold;
+  font-size: 15px;
+}
+.quiz-container .question {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.quiz-container .answers.done .answer {
+  pointer-events: none;
+}
+.quiz-container .answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.quiz-container .answers .answer {
+  border: 1px solid #fff;
+  background: #fff;
+  cursor: pointer;
+  padding: 15px 17px;
+  border-radius: 6px;
+  color: #4a4a4a;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+.quiz-container .answers .answer.correct::before,
+.quiz-container .answers .answer.wrong::before {
+  right: 20px;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  height: 20px;
+  line-height: 15px;
+}
+.quiz-container .answers .answer.correct {
+  background: #69e793;
+  border: 1px solid #0f0;
+  position: relative;
+}
+.quiz-container .answers .answer.correct::before {
+  position: absolute;
+  content: "✓";
+  color: #167a16;
+}
+.quiz-container .answers .answer.wrong {
+  border-color: #f00;
+  position: relative;
+}
+.quiz-container .answers .answer.wrong::before {
+  position: absolute;
+  content: "x";
+  color: #e72626;
+}
+.quiz-container .next-qus {
+  background: #0F77EA;
+  color: #fff;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+
+.show-result {
+  width: 350px;
+  height: 250px;
+  min-height: 250px;
+  background: #0F77EA;
+  color: #fff;
+  margin: 150px auto;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+.show-result .result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-transform: capitalize;
+  gap: 15px;
+  height: 100%;
+}
+.show-result .result p {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 1.7;
+  padding: 0 20px;
+  letter-spacing: 1px;
+}
+.show-result .result .btns {
+  display: flex;
+  gap: 20px;
+}
+.show-result .result .replay,
+.show-result .result .quit {
+  background: #fff;
+  border: 0;
+  padding: 10px 14px;
+  color: #0F77EA;
+}
+
+.hide {
+  display: none;
+}
+
+.footer {
+  color: #4a4a4a;
+}
+.footer span {
+  color: #0F77EA;
+  font-style: italic;
+}/*# sourceMappingURL=style.css.map */
